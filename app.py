@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Header, HTTPException
 from models import Alert
 from threat_intel import check_ip_reputation
-from playbook import block_ip
-from dashboard import create_case, get_cases
+from playbook import block_ip, create_case
+from dashboard import save_case, get_cases
 
 app = FastAPI(title="SOAR Engine")
 
@@ -35,7 +35,7 @@ def receive_alert(alert: Alert, role: str = Header(default="Junior")):
         action = block_ip(alert.source_ip)
         response["action_taken"] = action
 
-    create_case(
+    save_case(
         alert.dict(),
         intel,
         action
