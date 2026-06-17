@@ -18,5 +18,3 @@ def create_case(alert, intel, action):
     return case
 
 
-def get_cases():
-    return cases
