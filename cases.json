@@ -1,0 +1,35 @@
+[
+  {
+    "case_id": 1,
+    "timestamp": "2026-06-17 23:31:25.114513",
+    "alert": {
+      "timestamp": "2026-06-17",
+      "source_ip": "8.8.8.8",
+      "alert_type": "Port Scan",
+      "severity": "Medium"
+    },
+    "threat_intel": {
+      "risk_score": 10,
+      "status": "Safe"
+    },
+    "action": null
+  },
+  {
+    "case_id": 2,
+    "timestamp": "2026-06-17 23:32:44.691267",
+    "alert": {
+      "timestamp": "2026-06-17",
+      "source_ip": "192.168.1.100",
+      "alert_type": "Brute Force",
+      "severity": "High"
+    },
+    "threat_intel": {
+      "risk_score": 95,
+      "status": "Malicious"
+    },
+    "action": {
+      "action": "IP Blocked",
+      "ip": "192.168.1.100"
+    }
+  }
+]
