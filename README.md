@@ -15,4 +15,16 @@ A FastAPI-based SOAR project that automates alert ingestion, threat intelligence
 
 ## Run
 
-python -m uvicorn app:app --rel
+python -m uvicorn app:app --reload
+
+Alert Source
+    ↓
+FastAPI API
+    ↓
+Threat Intel
+    ↓
+SOAR Playbook
+    ↓
+Case Store
+    ↓
+Dashboard
