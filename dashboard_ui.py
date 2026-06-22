@@ -30,5 +30,18 @@ st.metric("Malicious Alerts", malicious_alerts)
 st.metric("Safe Alerts", safe_alerts)
 st.metric("Blocked IPs", blocked_ips)
 
+severity_counts = {}
+
+for case in cases:
+    severity = case["alert"]["severity"]
+
+    if severity in severity_counts:
+        severity_counts[severity] += 1
+    else:
+        severity_counts[severity] = 1
+
+st.subheader("Alerts by Severity")
+st.bar_chart(severity_counts)
+
 st.subheader("Incident Cases")
 st.dataframe(df)

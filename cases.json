@@ -31,5 +31,56 @@
       "action": "IP Blocked",
       "ip": "192.168.1.100"
     }
+  },
+  {
+    "case_id": 3,
+    "timestamp": "2026-06-22 18:20:53.660653",
+    "alert": {
+      "timestamp": "2026-06-22",
+      "source_ip": "8.8.8.8",
+      "alert_type": "Port Scan",
+      "severity": "Low"
+    },
+    "threat_intel": {
+      "risk_score": 10,
+      "status": "Safe"
+    },
+    "action": null
+  },
+  {
+    "case_id": 4,
+    "timestamp": "2026-06-22 18:29:03.465924",
+    "alert": {
+      "timestamp": "2026-06-22",
+      "source_ip": "45.33.32.156",
+      "alert_type": "Port Scan",
+      "severity": "Low"
+    },
+    "threat_intel": {
+      "risk_score": 88,
+      "status": "Malicious"
+    },
+    "action": {
+      "action": "IP Blocked",
+      "ip": "45.33.32.156"
+    }
+  },
+  {
+    "case_id": 5,
+    "timestamp": "2026-06-22 18:30:08.021384",
+    "alert": {
+      "timestamp": "2026-06-22",
+      "source_ip": "45.33.32.156",
+      "alert_type": "Port Scan",
+      "severity": "high"
+    },
+    "threat_intel": {
+      "risk_score": 88,
+      "status": "Malicious"
+    },
+    "action": {
+      "action": "IP Blocked",
+      "ip": "45.33.32.156"
+    }
   }
 ]
